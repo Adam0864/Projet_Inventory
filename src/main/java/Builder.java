@@ -1,79 +1,19 @@
 public enum Builder {
-    FENDER, MARTIN, GIBSON, COLLINGS, OLSON, RYAN, PRS, ANY;
+    FENDER, MARTIN, GIBSON, COLLINGS, OLSON, RYAN, PRS;
 
     public String toString() {
 
 
 
         switch (this) {
-
-
-
-
-
-
-
-
-
             case FENDER: return "Fender";
-
-
-
-
-
-
-
             case MARTIN: return "Martin";
-
-
-
-
-
-            case GIBSON:
-
-
-
-                return "Gibson" ;
-
-
-
-
-
+            case GIBSON: return "Gibson" ;
             case COLLINGS: return "Collings";
-
-
-
-
-
-            case OLSON:
-
-
-
-                return "01son" ;
-
-
-
-            case RYAN:
-
-
-
-                return "Ryan" ;
-
-
-
-            case PRS :
-
-
-
-                return "PRS";
-
-            default:
-
-
-
-
-
-                return "Unspecified";
+            case OLSON: return "01son" ;
+            case RYAN: return "Ryan" ;
+            case PRS : return "PRS";
+            default: return "Unspecified";
 
 
         }}}

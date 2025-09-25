@@ -2,9 +2,6 @@ public enum Builder {
     FENDER, MARTIN, GIBSON, COLLINGS, OLSON, RYAN, PRS;
 
     public String toString() {
-
-
-
         switch (this) {
             case FENDER: return "Fender";
             case MARTIN: return "Martin";
@@ -14,6 +11,4 @@ public enum Builder {
             case RYAN: return "Ryan" ;
             case PRS : return "PRS";
             default: return "Unspecified";
-
-
         }}}

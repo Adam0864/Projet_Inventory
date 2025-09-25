@@ -4,9 +4,11 @@ public class InstrumentSpec {
     private String model;
     private Type type;
 
-    public InstrumentSpec(Builder builder, String model,Type type, Wood backWood, Wood topWood) {
+    public InstrumentSpec(Builder builder, String model,Type type, Wood topWood, Wood backWood) {
         this.builder = builder;
-
+        this.model = model;
+        this.type = type;
+        this.topWood = topWood;
         this.backWood = backWood;
     }
 }

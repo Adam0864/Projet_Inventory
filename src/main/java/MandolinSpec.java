@@ -1,14 +1,14 @@
-public class GuitarSpec extends InstrumentSpec {
+public class MandolinSpec extends InstrumentSpec {
     private String model;
     private Builder builder;
     private Wood backWood,topWood;
     private Type type;
-    private int nbCordes;
+    private Style style;
 
 
-    public GuitarSpec(Builder builder, String model,Type type, Wood topWood, Wood backWood,int nbCordes) {
+    public MandolinSpec(Builder builder, String model, Type type, Wood topWood, Wood backWood, Style style) {
         super(builder, model, type,topWood, backWood);
-        this.nbCordes = nbCordes;
+        this.style = style;
     }
 
     public String getModel() {
@@ -31,8 +31,8 @@ public class GuitarSpec extends InstrumentSpec {
         return type;
     }
 
-    public int getNbCordes() {
-        return nbCordes;
+    public Style getStyle() {
+        return style;
     }
 
 }

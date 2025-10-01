@@ -20,4 +20,8 @@ public abstract class Instrument {
     public InstrumentSpec getInstrumentSpec() {
         return instrumentSpec;
     }
+
+    public String toString() {
+        return "Serial Number : " +serialNumber +" prix : "+ price + " " + instrumentSpec;
+    }
 }

@@ -18,7 +18,7 @@ public class MandolinSpec extends InstrumentSpec {
     }
 
     public String toString() {
-        return "Builder " + builder + " Model " + model+ " Type "+type+ "BackWood "+backWood+" TopWood "+topWood+ "Style " + style;
+        return super.toString() + "Style " + style;
     }
 
 }

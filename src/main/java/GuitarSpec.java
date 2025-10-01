@@ -21,6 +21,6 @@ public class GuitarSpec extends InstrumentSpec {
     }
 
     public String toString() {
-        return "Builder " + builder + " Model " + model+ " Type "+type+ "BackWood "+backWood+" TopWood "+topWood+ "nbCordes " + nbCordes;
+        return super.toString() + "nbCordes " + nbCordes;
     }
 }

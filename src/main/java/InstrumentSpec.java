@@ -55,4 +55,8 @@ public abstract class InstrumentSpec {
 
         return true;
     }
+
+    public String toString(){
+        return "Builder " + builder + " Model " + model+ " Type "+type+ "BackWood "+backWood+" TopWood "+topWood;
+    }
 }

@@ -1,8 +1,4 @@
 public class MandolinSpec extends InstrumentSpec {
-    private String model;
-    private Builder builder;
-    private Wood backWood,topWood;
-    private Type type;
     private Style style;
 
 
@@ -11,28 +7,18 @@ public class MandolinSpec extends InstrumentSpec {
         this.style = style;
     }
 
-    public String getModel() {
-        return model;
-    }
-
-    public Builder getBuilder() {
-        return builder;
-    }
-
-    public Wood getBackWood() {
-        return backWood;
-    }
-
-    public Wood getTopWood() {
-        return topWood;
-    }
-
-    public Type getType() {
-        return type;
-    }
-
     public Style getStyle() {
         return style;
+    }
+
+    public Boolean matches(InstrumentSpec instrumentSpec) {
+        return instrumentSpec instanceof MandolinSpec &&
+                this.style == ((MandolinSpec)instrumentSpec).getStyle() &&
+                 super.matches(instrumentSpec);
+    }
+
+    public String toString() {
+        return "Builder " + builder + " Model " + model+ " Type "+type+ "BackWood "+backWood+" TopWood "+topWood+ "Style " + style;
     }
 
 }

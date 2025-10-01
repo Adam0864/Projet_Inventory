@@ -9,11 +9,11 @@ public class FindInstrumentTester_v_Et {
         Inventory inventory = new Inventory();
         initializeInventory(inventory);
 
-        GuitarSpec whatErinLikes= new GuitarSpec(  Builder.FENDER,  "Stratocastor", 6,
-                Type.ELECTRIC, Wood.ALDER, Wood.ALDER);
-        MandolinSpec whatErinLikes2 = new MandolinSpec(Builder.PRS, "F-5G",Style.A, Type.ACOUSTIC,
-                Wood.MAPLE, Wood.MAPLE);
-        List matchingInstruments = inventory.search (whatErinLikes);
+        GuitarSpec whatErinLikes= new GuitarSpec(  Builder.FENDER,  "Stratocastor",
+                Type.ELECTRIC, Wood.ALDER, Wood.ALDER, 12);
+        MandolinSpec whatErinLikes2 = new MandolinSpec(Builder.PRS, "F-5G", Type.ACOUSTIC,
+                Wood.MAPLE, Wood.MAPLE,Style.A);
+        List matchingInstruments = inventory.search(whatErinLikes2);
 
         if (!matchingInstruments.isEmpty()) {
             System.out.println( matchingInstruments);

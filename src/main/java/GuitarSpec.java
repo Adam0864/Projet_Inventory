@@ -1,8 +1,4 @@
 public class GuitarSpec extends InstrumentSpec {
-    private String model;
-    private Builder builder;
-    private Wood backWood,topWood;
-    private Type type;
     private int nbCordes;
 
 
@@ -11,28 +7,20 @@ public class GuitarSpec extends InstrumentSpec {
         this.nbCordes = nbCordes;
     }
 
-    public String getModel() {
-        return model;
-    }
-
-    public Builder getBuilder() {
-        return builder;
-    }
-
-    public Wood getBackWood() {
-        return backWood;
-    }
-
-    public Wood getTopWood() {
-        return topWood;
-    }
-
-    public Type getType() {
-        return type;
-    }
-
     public int getNbCordes() {
         return nbCordes;
     }
 
+    public Boolean matches(InstrumentSpec instrumentSpec) {
+        if (! (instrumentSpec instanceof GuitarSpec)) {
+            return false;
+        }
+        if (this.nbCordes!= (((GuitarSpec)instrumentSpec).getNbCordes()))
+            return false;
+        return super.matches(instrumentSpec);
+    }
+
+    public String toString() {
+        return "Builder " + builder + " Model " + model+ " Type "+type+ "BackWood "+backWood+" TopWood "+topWood+ "nbCordes " + nbCordes;
+    }
 }

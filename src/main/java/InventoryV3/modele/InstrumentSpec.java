@@ -23,7 +23,7 @@ public abstract class InstrumentSpec {
     }
 
     public Boolean matches(InstrumentSpec searchinstrument){
-        if (searchinstrument.getBuilder() != this.getBuilder())
+        if (searchinstrument..getSpecifications().get("BUILDER") != this.getSpecifications().get("BUILDER"))
             return false;
 
         String model = searchinstrument.getModel().toLowerCase();

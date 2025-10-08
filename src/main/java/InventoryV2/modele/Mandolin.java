@@ -1,4 +1,6 @@
-public class Mandolin extends Instrument{
+package InventoryV2.modele;
+
+public class Mandolin extends Instrument {
 
     public Mandolin(String serialNumber, double price, MandolinSpec mandolinSpec) {
         super(serialNumber,price, mandolinSpec);
@@ -6,7 +8,7 @@ public class Mandolin extends Instrument{
 
     @Override
     public String toString() {
-        return "Mandolin " + price + " " + instrumentSpec;
+        return "InventoryV2.modele.Mandolin " + price + " " + instrumentSpec;
     }
 
 }

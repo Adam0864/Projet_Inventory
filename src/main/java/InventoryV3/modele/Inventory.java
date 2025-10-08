@@ -1,8 +1,8 @@
-import java.util.*;
-import java.util.ArrayList;
+package InventoryV3.modele;
+
 import java.util.Iterator;
 import java.util.LinkedList;
-import java.util.Locale;
+import java.util.List;
 
 public class Inventory {
     private LinkedList instruments;
@@ -11,8 +11,9 @@ public class Inventory {
         instruments = new LinkedList<>();
     }
 
-    public void addInstrument(String SerialNumber,double price,InstrumentSpec instrumentSpec) {
-        instruments.add((InstrumentFactory.createInstrument(SerialNumber,price,instrumentSpec)));
+    public void addInstrument(String SerialNumber, double price, InstrumentSpec instrumentSpec) {
+
+        instruments.add((new Instrument(SerialNumber,price,instrumentSpec)));
     }
 
     public List search(InstrumentSpec searchinstrument){

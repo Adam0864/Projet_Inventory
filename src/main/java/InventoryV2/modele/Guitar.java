@@ -1,4 +1,6 @@
-public class Guitar extends Instrument{
+package InventoryV2.modele;
+
+public class Guitar extends Instrument {
 
     public Guitar(String serialNumber, double price, GuitarSpec guitarSpec) {
         super(serialNumber,price,guitarSpec);
@@ -6,6 +8,6 @@ public class Guitar extends Instrument{
 
     @Override
     public String toString() {
-        return "Guitar " + super.toString();
+        return "InventoryV2.modele.Guitar " + super.toString();
     }
 }

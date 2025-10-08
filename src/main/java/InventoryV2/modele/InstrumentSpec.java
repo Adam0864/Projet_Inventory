@@ -1,6 +1,6 @@
-import java.util.*;
-import java.util.Iterator;
-import java.util.LinkedList;
+package InventoryV2.modele;
+
+import Enum.*;
 
 public abstract class InstrumentSpec {
     protected Builder builder;
@@ -8,7 +8,7 @@ public abstract class InstrumentSpec {
     protected String model;
     protected Type type;
 
-    public InstrumentSpec(Builder builder, String model,Type type, Wood topWood, Wood backWood) {
+    public InstrumentSpec(Builder builder, String model, Type type, Wood topWood, Wood backWood) {
         this.builder = builder;
         this.model = model;
         this.type = type;
@@ -57,6 +57,6 @@ public abstract class InstrumentSpec {
     }
 
     public String toString(){
-        return "Builder " + builder + " Model " + model+ " Type "+type+ "BackWood "+backWood+" TopWood "+topWood;
+        return "Enum.Builder " + builder + " Model " + model+ " Enum.Type "+type+ "BackWood "+backWood+" TopWood "+topWood;
     }
 }

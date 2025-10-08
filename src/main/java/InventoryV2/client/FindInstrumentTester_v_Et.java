@@ -1,5 +1,10 @@
+package InventoryV2.client;
 
-import java.util.Iterator;
+import Enum.*;
+import InventoryV2.modele.Inventory;
+import InventoryV2.modele.MandolinSpec;
+import InventoryV2.modele.GuitarSpec;
+
 import java.util.List;
 
 public class FindInstrumentTester_v_Et {
@@ -12,7 +17,7 @@ public class FindInstrumentTester_v_Et {
         GuitarSpec whatErinLikes= new GuitarSpec(  Builder.FENDER,  "Stratocastor",
                 Type.ELECTRIC, Wood.ALDER, Wood.ALDER, 12);
         MandolinSpec whatErinLikes2 = new MandolinSpec(Builder.PRS, "F-5G", Type.ACOUSTIC,
-                Wood.MAPLE, Wood.MAPLE,Style.A);
+                Wood.MAPLE, Wood.MAPLE, Style.A);
         List matchingInstruments = inventory.search(whatErinLikes2);
 
         if (!matchingInstruments.isEmpty()) {
@@ -31,7 +36,7 @@ public class FindInstrumentTester_v_Et {
                 new GuitarSpec(Builder.COLLINGS, "CJ",  Type.ACOUSTIC,
                         Wood.INDIAN_ROSEWOOD, Wood.SITKA, 6));
         inventory.addInstrument("V95693", 1499.95,
-                new GuitarSpec(Builder.FENDER, "Stratocastor",Type.ELECTRIC,
+                new GuitarSpec(Builder.FENDER, "Stratocastor", Type.ELECTRIC,
                         Wood.ALDER, Wood.ALDER, 12));
         inventory.addInstrument("V9512", 1549.95,
                 new GuitarSpec(Builder.FENDER, "Stratocastor",  Type.ELECTRIC,
@@ -66,7 +71,7 @@ public class FindInstrumentTester_v_Et {
                 new MandolinSpec(Builder.PRS, "F-5G", Type.ACOUSTIC,
                         Wood.MAPLE, Wood.MAPLE, Style.F));
         inventory.addInstrument("9019920", 745.99 ,
-                new MandolinSpec (Builder.PRS, "F-5G", Type.ACOUSTIC,
+                new MandolinSpec(Builder.PRS, "F-5G", Type.ACOUSTIC,
                         Wood.MAPLE, Wood.MAPLE, Style.A));
     }
 }

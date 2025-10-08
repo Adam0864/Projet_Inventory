@@ -1,4 +1,6 @@
-public abstract class Instrument {
+package InventoryV3.modele;
+
+public class Instrument {
     protected String serialNumber;
     protected double price;
     protected InstrumentSpec instrumentSpec;

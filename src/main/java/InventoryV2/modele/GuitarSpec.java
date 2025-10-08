@@ -1,8 +1,12 @@
+package InventoryV2.modele;
+
+import Enum.*;
+
 public class GuitarSpec extends InstrumentSpec {
     private int nbCordes;
 
 
-    public GuitarSpec(Builder builder, String model,Type type, Wood topWood, Wood backWood,int nbCordes) {
+    public GuitarSpec(Builder builder, String model, Type type, Wood topWood, Wood backWood, int nbCordes) {
         super(builder, model, type,topWood, backWood);
         this.nbCordes = nbCordes;
     }

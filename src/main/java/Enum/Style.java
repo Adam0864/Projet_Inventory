@@ -1,3 +1,5 @@
+package Enum;
+
 public enum Style {
     A,F;
 

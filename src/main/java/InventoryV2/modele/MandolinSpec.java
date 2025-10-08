@@ -1,3 +1,7 @@
+package InventoryV2.modele;
+
+import Enum.*;
+
 public class MandolinSpec extends InstrumentSpec {
     private Style style;
 
@@ -18,7 +22,7 @@ public class MandolinSpec extends InstrumentSpec {
     }
 
     public String toString() {
-        return super.toString() + "Style " + style;
+        return super.toString() + "Enum.Style " + style;
     }
 
 }

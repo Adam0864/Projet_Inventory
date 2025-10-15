@@ -11,9 +11,8 @@ public class Inventory {
         instruments = new LinkedList<>();
     }
 
-    public void addInstrument(String SerialNumber, double price, InstrumentSpec instrumentSpec) {
-
-        instruments.add((new Instrument(SerialNumber,price,instrumentSpec)));
+    public void addInstrument(Instrument instrument) {
+        instruments.add(instrument);
     }
 
     public List search(InstrumentSpec searchinstrument){

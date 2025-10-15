@@ -1,48 +1,60 @@
 package InventoryV3.modele;
 
 import Enum.*;
+
+import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
-public abstract class InstrumentSpec {
+public class InstrumentSpec {
     private Map<Specification,Object> specifications;
-    private Builder builder;
-    private Wood backWood,topWood;
-    private String model;
-    private Type type;
 
-    public InstrumentSpec(Builder builder, String model, Type type, Wood topWood, Wood backWood) {
-        specifications.put(Specification.BUILDER, builder);
-        specifications.put(Specification.MODEL, model);
-        specifications.put(Specification.TYPE, type);
-        specifications.put(Specification.TOPWOOD, topWood);
-        specifications.put(Specification.BACKWOOD, backWood);
+    public InstrumentSpec(List listSpe) {
+        this.specifications = new HashMap<>();
+        for (int i=0;i<listSpe.size();i+=2) {
+            Specification key = (Specification) listSpe.get(i);
+            Object value = listSpe.get(i+1);
+            specifications.put(key,value);
+        }
     }
 
-    public Map getSpecifications() {
+    public Map<Specification,Object> getSpecifications() {
         return specifications;
     }
 
+    public Builder getBuilder() {
+        return (Builder) specifications.get(Specification.BUILDER);
+    }
+
+    public Wood getTopWood() {
+        return (Wood) specifications.get(Specification.TOPWOOD);
+    }
+
+    public Wood getBackWood() {
+        return (Wood) specifications.get(Specification.BACKWOOD);
+    }
+
+    public String getModel() {
+        return (String) specifications.get(Specification.MODEL);
+    }
+
+    public Type getType() {
+        return (Type) specifications.get(Specification.TYPE);
+    }
+
     public Boolean matches(InstrumentSpec searchinstrument){
-        if (searchinstrument.getBuilder() != this.getBuilder())
-            return false;
-
-        String model = searchinstrument.getModel().toLowerCase();
-        if ((model != null) && (!model.equals("")) && (!model.equals(this.getModel().toLowerCase())))
-            return false;
-
-        if (searchinstrument.getType() != this.getType())
-            return false;
-
-        if (searchinstrument.getBackWood() != this.getBackWood())
-            return false;
-
-        if  (searchinstrument.getTopWood() != this.getTopWood())
-            return false;
+        for  (Specification speci : searchinstrument.getSpecifications().keySet()) {
+            if (this.specifications.containsKey(speci)) {
+                if (!(searchinstrument.getSpecifications().get(speci).equals(this.specifications.get(speci)))) {
+                    return false;
+                }
+            }
+        }
 
         return true;
     }
 
     public String toString(){
-        return "Enum.Builder " + builder + " Model " + model+ " Enum.Type "+type+ "BackWood "+backWood+" TopWood "+topWood;
+        return "Specifications : " + this.specifications.toString();
     }
 }
